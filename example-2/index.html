@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>CodePen - A Pen by jcutrell</title>
+
+    <style>
+body {
+  background-color: #245245;
+  font-family: 'Varela Round', sans-serif;
+}
+h3 {
+  color: #555;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+}
+.login {
+  width: 300px;
+  margin: 50px auto;
+  background: #f5f9fa;
+  padding: 50px;
+  border-radius: 8px;
+  text-align: center;
+}
+input[type=password],
+input[type=email] {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 8px;
+  box-sizing: border-box;
+}
+input[type=password]:focus,
+input[type=email]:focus {
+  border: 1px solid #888;
+  outline: none;
+}
+input[type=submit] {
+  background-color: #F29E1E;
+  width: 50%;
+  border: none;
+  padding: 8px;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Varela Round";
+  font-size: 1em;
+  text-transform: uppercase;
+}
+input[type=submit]:hover {
+  background-color: #DB8F2A;
+  cursor: pointer;
+}
+input {
+  margin: 6px 0;
+}
+input[type=password],
+input[type=submit] {
+  -webkit-filter: blur(1px);
+  transform: scale(0.9);
+  opacity: .4;
+  transition: all .4s;
+  pointer-events: none;
+}
+input[type=password]:valid + input[type=submit],
+input[type=email]:valid + input[type=password] {
+  pointer-events: auto;
+  -webkit-filter: none;
+  transform: scale(1);
+  opacity: 1;
+}
+
+</style>
+
+  <script src="js/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+<div class="login">
+  <h3>Log In</h3>
+  <form action="." method="post">
+    <input type="email" placeholder="Your Email" pattern="[^ @]*@[^ @]*\.[^ @]{2,}" required />
+    <input type="password" placeholder="Password..." required pattern=".{5,}" />
+    <input type="submit" />
+  </form>
+</div>
+
+  <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>
